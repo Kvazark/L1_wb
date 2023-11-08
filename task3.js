@@ -30,6 +30,7 @@ const MathX = (function() {
     }
 
     function isPrime(num) {
+        ////Здесь используется проверка только до квадратного корня числа num, что сокращает количество итераций проверки делителей.
         if (num <= 1) { return false; }
 
         for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
@@ -42,6 +43,8 @@ const MathX = (function() {
     }
 
     function primeNumbers(n) {
+        ///используется функция isPrime для определения простых чисел и
+        // сохраняются только простые числа до числа N, что позволяет исключить непростые числа из результата.
         let primes = [];
 
         for (let i = 2; i <= n; i++) {
