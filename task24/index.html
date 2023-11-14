@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="title-section">
+            <h1 class="title">Peoples</h1>
+            <button onclick="sortTableByColumn('fname')">Имя</button>
+            <button onclick="sortTableByColumn('lname')">Фамилия</button>
+            <button onclick="sortTableByColumn('tel')">Телефон</button>
+            <button onclick="sortTableByColumn('address')">Адрес</button>
+            <button onclick="sortTableByColumn('city')">Город</button>
+            <button onclick="sortTableByColumn('state')">Штат</button>
+            <button onclick="sortTableByColumn('zip')">ZIP</button>
+        </div>
+        <div class="cards-section">
+        </div>
+        <div class="pagination-section" id="pagination-section"></div>
+    </div>
+</section>
+</body>
+<script src="index.js"></script>
+<style>
+    body{
+        background: #f5f5f5;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 5% auto;
+        width: 88%;
+        gap: 2rem;
+    }
+    .cards-section{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        width: 12rem;
+        border-radius: 0.5rem;
+        padding: 1.2rem 1.1rem 1.2rem 1.2rem;
+        background: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+        gap: 1.2rem;
+    }
+    .card-container p{
+        margin: 0;
+        padding: 0;
+    }
+    .full-name{
+        display: flex;
+        gap: 0.5rem;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .state-and-city{
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .state-and-city span{
+        font-weight: bold;
+        color: #0eabcb;
+    }
+    .pagination-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .pages-list-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .page-btn{
+        border-radius: 10px;
+        /*border: solid 2px #2d4848;*/
+        padding: 0.5rem 1rem;
+        font-size: 16px;
+        font-weight: 600;
+        color: #23adad;
+    }
+    .btn-page-no-active{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.4rem;
+    }
+    .btn-page-active{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.5rem;
+        background: #23adad;
+    }
+    button{
+        font-family: "Helvetica", sans-serif;
+        outline: none;
+        color: black;
+        border: none;
+        background: white;
+    }
+    button:hover{
+        background: #d5d5d5;
+    }
+
+</style>
+</html>
