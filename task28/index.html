@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div>
+        <h2>Список покупок</h2>
+        <ul class="list">
+        </ul>
+        <template id="template">
+            <li></li>
+        </template>
+        <div>
+            <input type="text" name="product" id="input">
+            <button onclick="addTemplate(input.value)">Добавить элемент</button>
+        </div>
+
+    </div>
+</section>
+</body>
+<script src="index.js"></script>
+<style>
+    section{
+        margin: 5% 10%;
+    }
+</style>
+</html>

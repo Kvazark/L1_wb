@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div id="parent">
+        <h3>Список</h3>
+        <ul>
+            <li class="simple">1</li>
+            <li class="simple">2</li>
+            <li class="simple" id = 'li-3'>
+                <div>
+                    <p>Hello</p>
+                    <h5>-------</h5>
+                    <p>World!!!</p>
+                </div>
+            </li>
+        </ul>
+        <button onclick="fun1()">Все эелемнты списка</button>
+        <button onclick="fun2()">Вывести информацию о элементе списка</button>
+    </div>
+</section>
+</body>
+<script src="index.js"></script>
+<style>
+    .simple{
+        font-size: 18px;
+        color: #042d36;
+    }
+    .active{
+        color: #30fa03;
+    }
+    .no-active{
+        color: darkred;
+    }
+</style>
+</html>

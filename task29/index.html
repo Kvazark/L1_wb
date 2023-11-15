@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <form id="form">
+        <label>
+            Имя:
+            <input type="text" name="firstName">
+        </label>
+        <label>
+            Фамилия:
+            <input type="text" name="surname">
+        </label>
+        <label>
+            Возвраст:
+            <input type="text" name="age">
+        </label>
+        <button type="button" onclick="getDataFromForm()">отправить</button>
+    </form>
+</section>
+</body>
+<script src="index.js"></script>
+<style>
+    form{
+        width: 30%;
+        margin: 5% auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    label{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    button{
+        width: 40%;
+    }
+</style>
+</html>
