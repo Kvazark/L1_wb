@@ -3,20 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ee56eaf2-689f-4d39-ad2c-77ba134ac575&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ee56eaf2-689f-4d39-ad2c-77ba134ac575&load=package.standard&mode=debug&lang=ru-RU" type="text/javascript"></script>
+<!--    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ee56eaf2-689f-4d39-ad2c-77ba134ac575" type="text/javascript"></script>-->
+    <script>
+        // ymaps.ready(function () {
+        //     var myGeocoder = ymaps.geocode(
+        //         // Строка с адресом, который нужно геокодировать
+        //         "Москва"
+        //     );
+        //
+        //     /* После того, как поиск вернул результат, вызывается
+        //        callback-функция */
+        //     myGeocoder.then(
+        //         function (res) {
+        //             /* Размещение полученной коллекции
+        //                геообъектов на карте */
+        //            console.log(res)
+        //         }
+        //     );
+        // });
+    </script>
 </head>
 <body>
 <section>
     <form action="/some-route" method="GET" id="search">
         <label>Найди адрес:</label>
-        <input type="search" name="query" placeholder="Введите адрес..." />
+        <input type="search" id="suggest" placeholder="Введите адрес..." />
         <button>Искать!</button>
     </form>
-    <ul class="search-results"></ul>
+    <ul class="search-results">
+    </ul>
+    <div id="footer">
+        <div id="messageHeader"></div>
+        <div id="message"></div>
+    </div>
+
 </section>
 <script src="./index.js"></script>
 </body>
-<!--<script type="text/javascript" src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU&key=ee56eaf2-689f-4d39-ad2c-77ba134ac575"></script>-->
 </html>
 <style>
     body{
